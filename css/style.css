@@ -22,3 +22,53 @@ body {
     height: 100%;
     overflow: hidden;
   }
+
+  .simon-button {
+    position: absolute;
+    border: 0;
+    width: 49%;
+    height: 49%;
+    overflow: hidden;
+  }
+  
+  .simon-button:focus {
+    outline: none;
+  }
+  
+  .simon-green {
+    top: 0;
+    left: 0;
+    background: #05b614;
+  }
+  
+  .simon-red {
+    top: 0;
+    right: 0;
+    background: #d31610;
+  }
+  
+  .simon-blue {
+    bottom: 0;
+    right: 0;
+    background: #0a1fbf;
+  }
+  
+  .simon-yellow {
+    bottom: 0;
+    left: 0;
+    background: #e6d70d;
+  }
+
+  .display {
+    position: absolute;
+    margin: 26% 26%;
+    border-radius: 50%;
+    width: 36%;
+    height: 36%;
+    background: rgb(20, 20, 20);
+    color: #fff;
+    font-size: 24px;;
+    text-align: center;
+    overflow: hidden;
+  }
+  
