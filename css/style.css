@@ -13,6 +13,18 @@ body {
     height: 25%;
 }
 
+#start {
+    font-size: 24px;
+    background:red;
+    width:auto;
+    height: auto;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid black;
+    color:white;
+
+}
+
 .simon {
     position: relative;
     border-radius: 50%;
@@ -86,4 +98,5 @@ body {
     text-align: center;
     overflow: hidden;
   }
+  
   
