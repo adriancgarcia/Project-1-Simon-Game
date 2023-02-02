@@ -14,3 +14,11 @@ body {
     max-height: 400px;
     background: black;
 }
+
+.buttons {
+    position: relative;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
