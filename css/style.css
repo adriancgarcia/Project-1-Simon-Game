@@ -3,6 +3,16 @@ body {
     background: purple;
 }
 
+.gui {
+    color: white;
+}
+
+#start {
+    cursor: pointer;
+    width: 25%;
+    height: 25%;
+}
+
 .simon {
     position: relative;
     border-radius: 50%;
@@ -21,43 +31,48 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    cursor: pointer
   }
 
   .simon-button {
-    position: absolute;
-    border: 0;
-    width: 49%;
-    height: 49%;
-    overflow: hidden;
-  }
-  
-  .simon-button:focus {
-    outline: none;
-  }
-  
-  .simon-green {
-    top: 0;
-    left: 0;
-    background: #05b614;
-  }
-  
-  .simon-red {
-    top: 0;
-    right: 0;
-    background: #d31610;
-  }
-  
-  .simon-blue {
-    bottom: 0;
-    right: 0;
-    background: #0a1fbf;
-  }
-  
-  .simon-yellow {
-    bottom: 0;
-    left: 0;
-    background: #e6d70d;
-  }
+  position: absolute;
+  border: 0;
+  width: 49%;
+  height: 49%;
+  overflow: hidden;
+}
+
+.simon-button:focus {
+  outline: none;
+}
+
+.simon-green {
+  top: 0;
+  left: 0;
+  background: #05b614;
+  cursor: pointer
+}
+
+.simon-red {
+  top: 0;
+  right: 0;
+  background: #d31610;
+  cursor: pointer
+}
+
+.simon-blue {
+  bottom: 0;
+  right: 0;
+  background: #0a1fbf;
+  cursor: pointer
+}
+
+.simon-yellow {
+  bottom: 0;
+  left: 0;
+  background: #e6d70d;
+  cursor: pointer
+}
 
   .display {
     position: absolute;
