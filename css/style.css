@@ -1,34 +1,37 @@
-body {
-    height: 100%;
-    background: grey;
-}
-
-.gui {
+html {
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Rubik', sans-serif;
+    background-color:rgb(109, 109, 109);
+  }
+  
+  .game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  .invisble {
+    visibility: hidden;
+  }
+  
+  header {
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Russo One', sans-serif;
     color: white;
-}
-
-/* #start{
-    cursor: pointer;
-    width: 5%;
-    height: 5%;
-} */
-
-#start {
-    font-size: 16px;
-    background:red;
-    width:auto;
-    height: auto;
-    margin-top:32px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 2px solid black;
-    color:white;
-    cursor: pointer;
-    position: relative;
-
-}
-
-.simon {
+  }
+  
+  .button-container {
     position: relative;
     border-radius: 50%;
     margin: 100px auto;
@@ -38,9 +41,9 @@ body {
     height: 400px;
     max-height: 400px;
     background: black;
-}
+  }
 
-.buttons {
+  .buttons {
     position: relative;
     border-radius: 50%;
     width: 100%;
@@ -50,44 +53,68 @@ body {
   }
 
   .simon-button {
-  position: absolute;
-  border: 0;
-  width: 49%;
-  height: 49%;
-  overflow: hidden;
-}
-
-/* .simon-button:focus {
-  outline: none;
-} */
-
-.simon-green {
-  top: 0;
-  left: 0;
-  background: #05b614;
-  cursor: pointer
-}
-
-.simon-red {
-  top: 0;
-  right: 0;
-  background: #d31610;
-  cursor: pointer
-}
-
-.simon-blue {
-  bottom: 0;
-  right: 0;
-  background: #0a1fbf;
-  cursor: pointer
-}
-
-.simon-yellow {
-  bottom: 0;
-  left: 0;
-  background: #e6d70d;
-  cursor: pointer
-}
+    position: absolute;
+    border: 0;
+    width: 49%;
+    height: 49%;
+    overflow: hidden;
+  }
+  
+  .unclickable {
+    pointer-events: none;
+  }
+  
+  .button-red {
+    top: 0;
+    left: 210px;
+    background-color: #c51e00;
+    transition: 0.15s;
+    cursor: pointer;
+  }
+  
+  .button-red:active,
+  .button-red.activated {
+    background-color: #ef4f41;
+  }
+  
+  .button-green {
+    top: 0;
+    left: 0;
+    background-color: #3eba00;
+    transition: 0.15s;
+    cursor: pointer;
+  }
+  
+  .button-green:active,
+  .button-green.activated {
+    background-color: #54f504;
+  }
+  
+  .button-yellow {
+    top: 210px;
+    left: 0;
+    background-color: #e6ea05;
+    transition: 0.15s;
+    cursor: pointer;
+  }
+  
+  .button-yellow:active,
+  .button-yellow.activated {
+    background-color: #f6ff00;
+  }
+  
+  .button-blue {
+    top: 210px;
+    left:210px;
+    background-color: #035bf2;
+    transition: 0.15s;
+    cursor: pointer;
+  }
+  
+  .button-blue:active,
+  .button-blue.activated {
+    background-color: #2bbcff;
+  }
 
   .display {
     position: absolute;
@@ -102,4 +129,56 @@ body {
     overflow: hidden;
   }
   
+  .info-section {
+    text-align: center;
+  }
   
+  .start-button {
+    display: inline-block;
+    height: 38px;
+    padding: 0 15px;
+    color: rgb(241, 241, 241);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    font-family: 'Russo One', sans-serif;
+  }
+  
+  .start-button:hover {
+    color: #333;
+    background-color: rgb(241, 241, 241);
+    border-color: #888;
+    outline: 0;
+  }
+  
+  .info {
+    font-size: 36px;
+    color: white;
+    font-family: 'Russo One', sans-serif;
+  }
+  
+  @media screen and (max-width: 550px) {
+    .game {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .heading {
+      font-size: 2em;
+    }
+  
+    .button-container {
+      width: 100%;
+      height: 100%;
+      grid-template-rows: 150px 150px;
+      grid-template-columns: 150px 150px;
+    }
+  }

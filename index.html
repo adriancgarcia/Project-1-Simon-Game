@@ -4,39 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simon Game</title>
-    <script type="text/javascript" src ="js/app.js"></script>
+    <title>Document</title>
+
+    <!-- <script type="text/javascript" src ="js/simon.js"></script> -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
 </head>
-
 <body>
-    <div class = "gui">
-            <h2>Player 1</h2>
-            <h2>Level</h2>
-    <div class ="start-button">
-        <button class="simon-button start" id = "start">START</button>
-    </div>
-    </div>
-    <div class="simon">
-        
-        <div class="buttons">
-          
-          <button class="simon-button simon-green" id="green"></button>
-          <button class="simon-button simon-red" id="red"></button>
-          <button class="simon-button simon-blue" id="blue"></button>
-          <button class="simon-button simon-yellow" id="yellow"></button>
 
-            <div class="display">
-                <div class ="start-button">
-                    <button class="simon-button start" id = "start">START</button>
-                </div>
-                <!-- <p>
-                <span id="play"><i class="fa fa-circle-o"></i></span>
-                    <span class="level" id="level"></span>
-                </p> -->
+    <main class="game">
+        <header>
+          <h1 class="heading">Simon</h1>
+        </header>
+      
+        <section class="button-container unclickable">
+            <div class = buttons>
+                <div class="button simon-button button-red" data-button="red"></div>
+                <div class="button simon-button button-green" data-button="green"></div>
+                <div class="button simon-button button-blue" data-button="blue"></div>
+                <div class="button simon-button button-yellow" data-button="yellow"></div>
             </div>
-        </div>
-    </div>
-<body>
-
+        </section>
+      
+        <footer class="info-section">
+          <button class="start-button">Start</button>
+          <span class="info hidden"></span>
+        </footer>
+      </main>
+      
+      <div class="hidden">
+        <audio src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" data-sound="red"></audio>
+        <audio src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" data-sound="green"></audio>
+        <audio src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" data-sound="blue"></audio>
+        <audio src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" data-sound="yellow"></audio>
+      </div>
+      
+      <script type="text/javascript" src ="js/app.js"></script>
+</body>
 </html>
